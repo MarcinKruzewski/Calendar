@@ -27,7 +27,7 @@ print '
 	<td>eMail: </td>	<td><input type="text" name = "mail"></td>
 </tr>
 <tr>
-	<td></td><td><input type = "submit" value = "rejestruj"/></td>
+	<td></td><td><input type = "submit" value = "Rejestruj"/></td>
 </tr>
 </table>';
 $user=!empty($_POST['user']) ? $_POST['user'] : '';
@@ -50,8 +50,8 @@ if($user!=''||$pswd!=''||$pswd2!=''||$mail!=''){
 		$sid=generateRandomString();
 		$sql="INSERT INTO users VALUES (NULL, '{$user}', '{$pswd}', '{$sid}', 'user', '{$mail}', '0');";
 		$db->query($sql);
-		$msg="Witamy w Termainarzu!\n \nPoniżej znajduje się link aktywacyjny:\nhttp://localhost/activate.php?A61IJx3DFt='{$mail}'";
-		$headers = 'From: <noreply@terminarz.com>';
+		$msg="Witamy w Termainarzu!\n \nPoniżej znajduje się link aktywacyjny:\nhttp://localhost/activate.php?A61IJx3DFt='{$mail}'\n \nTwój login to:  {$user}\nTwoje hasło to: {$pswd}";
+		$headers = 'From: <noreply@klukowo.com>';
 		$subject = 'Aktywacja konta w terminarzu.';
 		mail($mail,$subject,$msg,$headers);
 		print ('Dodano użytkownika!');
