@@ -30,7 +30,7 @@ else{
 }
 
 
-print '</ul>    </div> <div class="main-content">
+print '</ul>    </div><div class="main-content"> 
         <div class="swipe-area"></div>
         <a href="#" data-toggle=".container" id="sidebar-toggle">
             <span class="bar"></span>

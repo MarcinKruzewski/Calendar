@@ -6,7 +6,7 @@ print '<head>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
 
-  <link rel="stylesheet" href="css/coregrey.css" />
+  <link rel="stylesheet" href="css/coregrey.css" />                                                       <!--select from: coreblue.css, coregrey.css, corepink.css--!>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="js/swipe.js"></script>
@@ -19,4 +19,6 @@ print '<head>
   
 print "</head>";
 
+include 'ivents.php';
+include 'businesshours.php';
 include 'dbconnect.php';
