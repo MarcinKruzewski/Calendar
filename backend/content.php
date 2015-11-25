@@ -14,7 +14,7 @@ $places[5]='addivent.php';
 	$places[53]='addivent4.php';
 	$places[54]='addivent5.php';
 	$places[55]='addivent6.php';
-
+$places[6]='visitlist.php';
 $places[7]='logout.php';
 
 $places[10]='editvisit.php';

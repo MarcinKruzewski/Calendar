@@ -5,7 +5,7 @@ class visits {
 	{
 		global $db, $pswd;
 		$list='[';
-		$sql = 'SELECT * FROM visits';
+		$sql = 'SELECT * FROM visits ORDER BY `visits`.`date` DESC';
 		foreach ($db->query($sql) as $row) {
 			if ($row['admin']==$pswd['user']||$row['client']==$pswd['user']){
 				$list .= "{ id: '{$row['id']}', title: '{$row['title']}, {$row['admin']}.', start: '{$row['date']}T{$row['time']}', end: '{$row['date']}T{$row['end']}', url: 'index.php?location=10&id={$row['id']}' },";
@@ -100,6 +100,13 @@ class extVisit extends visits
 	{
 		global $db;
 		$sql = "UPDATE `visits` SET `confirmed`=1 WHERE `visits`.`id` = {$this->_opened['id']}; ";
+		$db->query($sql);
+	}
+
+	public function delete()
+	{
+		global $db;
+		$sql = "DELETE FROM `visits` WHERE `visits`.`id` = {$this->_opened['id']}";
 		$db->query($sql);
 	}
 
