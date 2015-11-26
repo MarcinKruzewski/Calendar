@@ -70,7 +70,7 @@ class extClient extends clients
 		global $db;
 		if ($this->_opened['id']!='NULL')
 		{
-			$sql = "UPDATE `users` SET `user`='{$this->_opened['user']}', `pswd`='{$this->_opened['pswd']}', `type`='{$this->_opened['type']}', `mail`='{$this->_opened['mail']}', `tel`='{$this->_opened['tel']}', `active`='{$this->_opened['active']}' WHERE `users`.`id` = {$this->_opened['id']}; ";
+			$sql = "UPDATE `users` SET `user`='{$this->_opened['user']}', `pswd`='{$this->_opened['pswd']}', `type`='{$this->_opened['type']}', `mail`='{$this->_opened['mail']}', `tel`='{$this->_opened['tel']}', `active`='{$this->_opened['active']}', `style`='{$this->_opened['style']}' WHERE `users`.`id` = {$this->_opened['id']}; ";
 
 		}
 		else

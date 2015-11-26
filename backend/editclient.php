@@ -1,6 +1,7 @@
 <?php
 	$id = !empty($_GET['id']) ? $_GET['id'] : '';
 	$client = new extClient;
+
 if ($pswd['type']=='admin')
 {
 	$client->open($_GET['id']);
@@ -17,7 +18,8 @@ if ($pswd['type']=='admin')
 	print "	<tr><th>Typ:</th><td>{$client->getParam('type')}</td><td><select name='type'><option>Bez zmian</option><option>user</option><option>admin</option></td></tr>";
 }
 	print "	<tr><th>eMail:</th><td>{$client->getParam('mail')}</td><td><input type='text' name='mail'></td></tr>
-			<tr><th>Telefon:</th><td>{$client->getParam('tel')}</td><td><input type='text' name='tel'></td></tr>";
+			<tr><th>Telefon:</th><td>{$client->getParam('tel')}</td><td><input type='text' name='tel'></td></tr>
+			<tr><th>Styl strony:</th><td>{$style[$client->getParam('style')]}</td><td><select name='style'><option>Bez zmian</option><option>grey</option><option>blue</option><option>pink</option></td></tr>";
 	print "<tr><td><label><input type='checkbox' name='delete' value='1' />Usuń klienta</label></td><td></td><td><input type='submit' value='Edytuj'></td></tr></table></form>";
 
 
@@ -25,6 +27,12 @@ if ($pswd['type']=='admin')
 if (!empty($_POST['user'])) $client->setParam('user', $_POST['user']);
 if (!empty($_POST['pswd'])) $client->setParam('pswd', $_POST['pswd']);
 if (!empty($_POST['type'])&&$_POST['type']!='Bez zmian') $client->setParam('type', $_POST['type']);
+if (!empty($_POST['style']))
+{
+	if ($_POST['style']=='grey') $client->setparam('style', 1);
+	if ($_POST['style']=='blue') $client->setparam('style', 2);
+	if ($_POST['style']=='pink') $client->setparam('style', 3);
+} 
 if (!empty($_POST['mail'])) $client->setParam('mail', $_POST['mail']);
 if (!empty($_POST['tel'])) $client->setParam('tel', $_POST['tel']);
 if (!empty($_POST['delete'])) $client->delete();
