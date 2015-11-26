@@ -29,7 +29,7 @@ if ($pswd['type']=='admin')
 	print implode('</option><option>',$appointment);
 												 print "</option></td></tr>";
 }
-												 print "<tr><td></td><td><label><input type='checkbox' name='delete' value='1' />Usuń wizytę</label></td><td><input type='submit' value='Edytuj'></td></tr></table></form>";
+												 print "<tr><td><label><input type='checkbox' name='delete' value='1' />Usuń wizytę</label></td><td></td><td><input type='submit' value='Edytuj'></td></tr></table></form>";
 if (!empty($_POST['title'])) $ivent->setParam('title', $_POST['title']);
 if (!empty($_POST['client'])&&$_POST['client']!='Bez zmian') $ivent->setParam('client', $_POST['client']);
 if (!empty($_POST['admin'])&&$_POST['admin']!='Bez zmian') $ivent->setParam('admin', $_POST['admin']);
