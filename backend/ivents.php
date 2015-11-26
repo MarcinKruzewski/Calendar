@@ -15,6 +15,42 @@ class visits {
 		return $list;
 	}
 
+	public function getVisitList($user)
+	{
+		global $db, $pswd;
+		$sql = 'SELECT * FROM visits ORDER BY `visits`.`date` DESC';
+		foreach ($db->query($sql) as $row) 
+		{
+			if ($row['admin']==$pswd['user']||$row['client']==$pswd['user'])
+			{
+				$list[] = $row;
+			}
+		}
+		$return = !empty($list) ? $list : '';
+		return $return;
+	}
+
+	public function getVisitListFilter($user, $param, $value)
+	{
+		global $db, $pswd;
+		$translate['Tytuł']='title';
+		$translate['Gospodarz']='admin';
+		$translate['Użytkowink']='client';
+		$translate['Data']='date';
+		$translate['Godzina']='time';
+		$param = $translate[$param];
+		$sql = "SELECT * FROM visits WHERE `{$param}` LIKE '%{$value}%' ORDER BY `visits`.`date` DESC;";
+		foreach ($db->query($sql) as $row) 
+		{
+			if ($row['admin']==$pswd['user']||$row['client']==$pswd['user'])
+			{
+				$list[] = $row;
+			}
+		}
+		$return = !empty($list) ? $list : '';
+		return $return;
+	}
+
 	public function freeAppointments($date, $admin)
 	{
 		global $db, $appointment;

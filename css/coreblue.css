@@ -91,6 +91,12 @@ width: 100%;
     width: 100%;
     line-height: 160%;
 }
+.content th{
+    padding: 11px;
+}
+.content td{
+    padding: 10px;
+}
 .main-content #sidebar-toggle {
     background: #47BEE6;
     border-radius: 3px;

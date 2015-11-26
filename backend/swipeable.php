@@ -7,6 +7,7 @@ if ($sid==$pswd['sessionid']) {
         	    <li><a href="index.php?location=3">Kalendarz</a></li>
         	    <li><a href="index.php?location=4">Wizyty</a></li>
             	<li><a href="index.php?location=5">Umów wizytę</a></li>
+                <li><a href="index.php?location=11">Edytuj dane użytkownika</a></li>
        		    <li><a href="index.php?location=7">Wyloguj</a></li>
 			  ';
 	}

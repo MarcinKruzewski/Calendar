@@ -21,5 +21,6 @@ print '<head>
 print "</head>";
 
 include 'ivents.php';
+include 'client.php';
 include 'businesshours.php';
 include 'dbconnect.php';
