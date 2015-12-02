@@ -20,6 +20,14 @@ $places[7]='logout.php';
 $places[10]='editvisit.php';
 $places[11]='editclient.php';
 
+/*
+$places = array(
+	0 => 'intro.php',
+	1 => 'register.php'
+);
+*/
+
 $location=!empty($_GET['location']) ? $_GET['location'] : 0;
+$location=!empty($places[$location]) ? $location : 0;
 include $places[$location];
 print '</div></body>';

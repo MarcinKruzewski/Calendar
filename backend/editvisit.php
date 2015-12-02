@@ -34,6 +34,10 @@ if (!empty($_POST['title'])) $ivent->setParam('title', $_POST['title']);
 if (!empty($_POST['client'])&&$_POST['client']!='Bez zmian') $ivent->setParam('client', $_POST['client']);
 if (!empty($_POST['admin'])&&$_POST['admin']!='Bez zmian') $ivent->setParam('admin', $_POST['admin']);
 if (!empty($_POST['date'])) $ivent->setParam('date', $_POST['date']);
-if (!empty($_POST['time'])&&$_POST['time']!='Bez zmian') $ivent->setParam('time', $_POST['time']);
+if (!empty($_POST['time'])&&$_POST['time']!='Bez zmian')
+{
+	$ivent->setParam('time', $_POST['time']);
+	$ivent->setEnd();
+}
 if (!empty($_POST['delete'])) $ivent->delete();
 $ivent->replace();

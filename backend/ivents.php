@@ -35,7 +35,7 @@ class visits {
 		global $db, $pswd;
 		$translate['Tytuł']='title';
 		$translate['Gospodarz']='admin';
-		$translate['Użytkowink']='client';
+		$translate['Użytkownik']='client';
 		$translate['Data']='date';
 		$translate['Godzina']='time';
 		$param = $translate[$param];
