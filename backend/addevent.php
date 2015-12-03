@@ -1,5 +1,5 @@
 <?php
-print '<h2>Nowa wizyta</h2><form method="post" action="index.php?location=51"><table><tr><td>Rodzaj wizyty:</td><td><input required type="text" name="title"></td></tr><tr>';
+print '<h2>Nowa wizyta</h2><form method="post" action="51.html"><table><tr><td>Rodzaj wizyty:</td><td><input required type="text" name="title"></td></tr><tr>';
 $sql = 'SELECT * FROM users';
 if ($pswd['type']=='admin'){
 	print '<td>Klient:</td>	<td><select required name="client">';

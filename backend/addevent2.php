@@ -6,7 +6,7 @@ $visit['title']=$title;
 $visit['client']=$client;
 $_SESSION['newVisit']=json_encode($visit);
 if ($pswd['type']=='user') $client=$pswd['user'];
-print "<h2>Nowa wizyta</h2><form method='post' action='index.php?location=52'><table><tr><td>Gospodarz:</td><td><select name='host' required>";
+print "<h2>Nowa wizyta</h2><form method='post' action='52.html'><table><tr><td>Tytuł</td><td>{$visit['title']}</td></tr><tr><td>Klient</td><td>{$visit['client']}</td></tr><tr><td>Gospodarz:</td><td><select name='host' required>";
 $sql = 'SELECT * FROM users';
 foreach ($db->query($sql) as $row) {
 	if ($row['type']=='admin'){
