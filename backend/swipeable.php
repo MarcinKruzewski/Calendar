@@ -3,30 +3,31 @@ print '<div class="container">    <div id="sidebar">        <ul>';
 if ($sid==$pswd['sessionid']) {
 	if ($pswd['type']=='user'){
 		print '
-    	        <li><a href="index.php?location=0">O nas</a></li>
-        	    <li><a href="index.php?location=3">Kalendarz</a></li>
-        	    <li><a href="index.php?location=4">Wizyty</a></li>
-            	<li><a href="index.php?location=5">Umów wizytę</a></li>
-                <li><a href="index.php?location=11">Edytuj dane użytkownika</a></li>
-       		    <li><a href="index.php?location=7">Wyloguj</a></li>
+    	        <li><a href="0.html">O nas</a></li>
+        	    <li><a href="3.html">Kalendarz</a></li>
+        	    <li><a href="4.html">Wizyty</a></li>
+            	<li><a href="5.html">Umów wizytę</a></li>
+                <li><a href="11.html">Edytuj dane użytkownika</a></li>
+       		    <li><a href="7.html">Wyloguj</a></li>
 			  ';
 	}
 	if ($pswd['type']=='admin'){
 		print '
-    	        <li><a href="index.php?location=0">O nas</a></li>
-        	    <li><a href="index.php?location=3">Kalendarz</a></li>
-        	    <li><a href="index.php?location=4">Wizyty</a></li>
-            	<li><a href="index.php?location=5">Umów wizytę</a></li>
-            	<li><a href="index.php?location=6">Klienci</a></li>
-       		    <li><a href="index.php?location=7">Wyloguj</a></li>
+    	        <li><a href="0.html">O nas</a></li>
+        	    <li><a href="3.html">Kalendarz</a></li>
+        	    <li><a href="4.html">Wizyty</a></li>
+            	<li><a href="5.html">Umów wizytę</a></li>
+                <li><a href="9.html">Potwierdź wizyty</a></li>
+            	<li><a href="6.html">Klienci</a></li>
+       		    <li><a href="7.html">Wyloguj</a></li>
 			  ';
 	}
 }	
 else{
 	print '
-            <li><a href="index.php?location=0">O nas</a></li>
-            <li><a href="index.php?location=1">Zarejestruj</a></li>
-            <li><a href="index.php?location=2">Zaloguj</a></li>
+            <li><a href="0.html">O nas</a></li>
+            <li><a href="1.html">Zarejestruj</a></li>
+            <li><a href="2.html">Zaloguj</a></li>
           ';
 }
 

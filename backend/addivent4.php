@@ -13,7 +13,7 @@ else
 	print '<h2>Nowa wizyta</h2><form method="post" action="index.php?location=54"><table>';
 	if (!empty($date))
 	{ 
-		$dbvis=new visits;
+		$dbvis=new Visits;
 		$avaliable=$dbvis->freeAppointments($visit['date'],$visit['host']);
 		if ($avaliable==NULL)
 		{

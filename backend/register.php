@@ -34,8 +34,8 @@ print '
 </tr>
 </table>';
 $user=!empty($_POST['user']) ? $_POST['user'] : '';
-$pswd=!empty($_POST['pswd']) ? $_POST['pswd'] : '';
-$pswd2=!empty($_POST['pswd2']) ? $_POST['pswd2'] : '';
+$pswd=!empty($_POST['pswd']) ? md5($_POST['pswd']) : '';
+$pswd2=!empty($_POST['pswd2']) ? md5($_POST['pswd2']) : '';
 $mail=!empty($_POST['mail']) ? $_POST['mail'] : '';
 $tel=!empty($_POST['tel']) ? $_POST['tel'] : '';
 if($user!=''||$pswd!=''||$pswd2!=''||$mail!=''||$tel!=''){

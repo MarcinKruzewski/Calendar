@@ -14,7 +14,7 @@ print '
 </tr>
 </table>';
 $user=!empty($_POST['user']) ? $_POST['user'] : '';
-$try=!empty($_POST['try']) ? $_POST['try'] : 'wrong';
+$try=!empty($_POST['try']) ? md5($_POST['try']) : 'wrong';
 if($user!=''){
 	$sql = "SELECT * FROM users WHERE user = '{$user}'";
 	$query = $db->query($sql);

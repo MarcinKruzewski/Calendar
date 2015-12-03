@@ -16,7 +16,7 @@ print"
 			businessHours: true,
 			eventLimit: true,
 			events: ";
-$visit = new visits;
+$visit = new Visits;
 $list = $visit->getJSONlist($pswd['user']);
 print $list;
 print "	});	});</script>

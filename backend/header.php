@@ -26,6 +26,8 @@ print
   
 print "</head>";
 
-include 'ivents.php';
-include 'client.php';
+include 'Visits.php';
+include 'ExtVisit.php';
+include 'Clients.php';
+include 'ExtClient.php';
 include 'businesshours.php';

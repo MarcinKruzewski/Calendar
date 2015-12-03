@@ -2,4 +2,4 @@
 $_SESSION['user'] = NULL;
 $_SESSION['sid'] = NULL;
 session_destroy();
-header ('Location: index.php');
+header ('Location: 0.html');
