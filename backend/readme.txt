@@ -1,0 +1,1 @@
+Przed instalacją zapoznaj się z danymi w plikach dbconnect.php i businesshours.php.

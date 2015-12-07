@@ -1,16 +1,18 @@
 <?php
 //Zestawienie godzin wizyt
-$businessday[1] = 1;
-$businessday[2] = 1;
-$businessday[3] = 1;
-$businessday[4] = 1;
-$businessday[5] = 1;
-$businessday[6] = 0;
-$businessday[7] = 0;
+$businessday = array(
+	1 = 1,		//Dni robocze(1 = poniedziałek, 7 = niedziela/1 = pracujący, 0 = wolny)	
+	2 = 1,
+	3 = 1,
+	4 = 1,
+	5 = 1,
+	6 = 0,
+	7 = 0,
+	);
 
-$appointmentStep = 20;
-$openingHour = 7;
-$closingHour = 17;
+$appointmentStep = 20;			//Kolejna wizyta co 20min
+$openingHour = 7;				//otwarte od 7:00
+$closingHour = 17;				//otwarte do 17:00
 
 for ($i = 1; $i <= 24; $i++)
 {
